@@ -1,4 +1,5 @@
-﻿using Core.Entities;
+﻿using API.DTOs;
+using Core.Entities;
 using Microsoft.AspNetCore.Mvc;
 
 namespace API.Controllers
@@ -32,7 +33,7 @@ namespace API.Controllers
         }
 
         [HttpPost("ValidationError")]
-        public IActionResult GetValidationError(Product product)
+        public IActionResult GetValidationError(ProductDto product)
         {
             return BadRequest("Validation failed");
         }
