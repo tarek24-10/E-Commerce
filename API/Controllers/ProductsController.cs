@@ -1,4 +1,5 @@
-﻿using Core.Entities;
+﻿using API.RequestHelpers;
+using Core.Entities;
 using Core.Interfaces;
 using Core.Specifications;
 using Microsoft.AspNetCore.Mvc;
@@ -13,7 +14,14 @@ namespace API.Controllers
         public async Task<ActionResult<IReadOnlyList<Product>>> GetProducts([FromQuery]ProductSpecParams specParams)
         {
             var spec = new ProductSpecification(specParams);
-            return Ok(await repo.ListAllWithSpecAsync(spec));
+
+            var products = await repo.ListAllWithSpecAsync(spec);
+            var count = await repo.CountAsync(spec);
+
+            var pagination = new Pagination<Product>(specParams.PageIndex, specParams.PageSize
+                , count, products);
+
+            return Ok(pagination);
         }
 
         [HttpGet("{id:int}")]

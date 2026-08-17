@@ -9,6 +9,9 @@ namespace Core.Specifications
                         (specParams.Types.Count == 0 || specParams.Types.Contains(p.Type))
             )
         {
+
+                ApplyPagination((specParams.PageIndex -1) * specParams.PageSize, specParams.PageSize);    
+
                 switch (specParams.Sort)
                 {
                     case "priceAsc":
