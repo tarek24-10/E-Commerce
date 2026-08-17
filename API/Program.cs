@@ -1,3 +1,4 @@
+using API.Middlewares;
 using Core.Interfaces;
 using Infrastructure.Data;
 using Infrastructure.Data.SeedData;
@@ -18,6 +19,8 @@ builder.Services.AddScoped<IProductRepository, ProductRepository>();
 builder.Services.AddScoped(typeof(IGenenricRepository<>), typeof(GenericRepository<>));
 
 var app = builder.Build();
+
+app.UseMiddleware<ExceptionMiddleware>();
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
