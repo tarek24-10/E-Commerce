@@ -13,7 +13,7 @@ namespace API.Controllers
         public async Task<ActionResult<IReadOnlyList<Product>>> GetProducts(string? brand, string? type, string? sort)
         {
             var spec = new ProductSpecification(brand, type, sort);
-            return Ok(await repo.GetAllWithSpecAsync(spec));
+            return Ok(await repo.ListAllWithSpecAsync(spec));
         }
 
         [HttpGet("{id:int}")]
