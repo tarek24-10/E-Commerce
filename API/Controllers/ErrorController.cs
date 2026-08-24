@@ -8,31 +8,31 @@ namespace API.Controllers
     [ApiController]
     public class ErrorController : ControllerBase
     {
-        [HttpGet("Unauthorized")]
+        [HttpGet("unauthorized")]
         public IActionResult GetUnauthorized()
         {
             return Unauthorized();
         }
 
-        [HttpGet("NotFound")]
+        [HttpGet("notfound")]
         public IActionResult GetNotFound()
         {
             return NotFound();
         }
 
-        [HttpGet("BadRequest")]
+        [HttpGet("badrequest")]
         public IActionResult GetBadRequest()
         {
             return BadRequest("Not a good request");
         }
 
-        [HttpGet("InternalError")]
+        [HttpGet("internalerror")]
         public IActionResult GetInternalError()
         {
             throw new Exception("This is a test exception");
         }
 
-        [HttpPost("ValidationError")]
+        [HttpPost("validationerror")]
         public IActionResult GetValidationError(ProductDto product)
         {
             return BadRequest("Validation failed");

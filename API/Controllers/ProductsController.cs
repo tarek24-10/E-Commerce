@@ -13,7 +13,7 @@ namespace API.Controllers
         {
             var spec = new ProductSpecification(specParams);
 
-            return await CreatePagedResult<Product>(repo, spec, specParams.PageIndex, specParams.PageSize);
+            return await CreatePagedResult<Product>(repo, spec, specParams.PageNumber, specParams.PageSize);
         }
 
         [HttpGet("{id:int}")]

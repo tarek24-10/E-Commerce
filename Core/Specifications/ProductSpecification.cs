@@ -11,7 +11,7 @@ namespace Core.Specifications
             )
         {
 
-                ApplyPagination((specParams.PageIndex -1) * specParams.PageSize, specParams.PageSize);    
+                ApplyPagination((specParams.PageNumber -1) * specParams.PageSize, specParams.PageSize);    
 
                 switch (specParams.Sort)
                 {
