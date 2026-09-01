@@ -55,7 +55,7 @@ app.UseAuthorization();
 
 app.MapControllers();
 
-app.MapIdentityApi<AppUser>();
+app.MapGroup("api").MapIdentityApi<AppUser>();
 
 try
 {
