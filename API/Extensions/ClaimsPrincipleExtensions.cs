@@ -24,5 +24,15 @@ namespace API.Extensions
 
             return appUser;
         }
+
+        public static async Task<AppUser> GetUserByEmailWithAddress(this UserManager<AppUser> userManager, ClaimsPrincipal user)
+        {
+            var appUser = await userManager.Users.Include(u => u.Address)
+                .FirstOrDefaultAsync(u => u.Email == user.GetEmail());
+
+            if (appUser == null) throw new AuthenticationException("User not found");
+
+            return appUser;
+        }
     }
 }
