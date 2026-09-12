@@ -51,10 +51,10 @@ namespace Infrastructure.Data
             return await ApplySpecification(spec).FirstOrDefaultAsync();
         }
 
-        public async Task<bool> SaveChangesAsync()
-        {
-            return await context.SaveChangesAsync() > 0;
-        }
+        //public async Task<bool> SaveChangesAsync()
+        //{
+        //    return await context.SaveChangesAsync() > 0;
+        //}
 
         public void Update(T entity)
         {
