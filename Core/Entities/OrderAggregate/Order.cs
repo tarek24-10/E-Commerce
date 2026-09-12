@@ -11,5 +11,6 @@
         public decimal Subtotal { get; set; }
         public OrderStatus Status { get; set; } = OrderStatus.Pending;
         public required string PaymentIntentId { get; set; }
+        public decimal GetTotal() => Subtotal + DeliveryMethod.Price;
     }
 }
