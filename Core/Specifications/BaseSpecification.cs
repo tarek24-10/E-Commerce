@@ -9,9 +9,9 @@ namespace Core.Specifications
 
         public Expression<Func<T, bool>>? Criteria => criteria;
 
-        public Expression<Func<T, object>>? OrderBy {  get; private set; }
+        public Expression<Func<T, object>>? OrderBy { get; private set; }
 
-        public Expression<Func<T, object>>? OrderByDescending {  get; private set; }
+        public Expression<Func<T, object>>? OrderByDescending { get; private set; }
 
         public bool IsDistinct { get; private set; }
 
@@ -20,6 +20,10 @@ namespace Core.Specifications
         public int Skip { get; private set; }
 
         public bool IsPagingEnabled { get; private set; }
+
+        public List<string> IncludeStrings {get;} = [];
+
+        public List<Expression<Func<T, object>>> IncludeExpressions { get; } = [];
 
         public IQueryable<T> ApplyCriteria(IQueryable<T> query)
         {
@@ -49,6 +53,16 @@ namespace Core.Specifications
             Skip = skip;
             Take = take;
             IsPagingEnabled = true;
+        }
+
+        protected void AddInclude(string includeString)
+        {
+            IncludeStrings.Add(includeString);
+        }
+
+        protected void AddInclude(Expression<Func<T, object>> includeExpression)
+        {
+            IncludeExpressions.Add(includeExpression);
         }
     }
 
