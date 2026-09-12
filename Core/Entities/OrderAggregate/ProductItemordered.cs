@@ -1,6 +1,6 @@
 ﻿namespace Core.Entities.OrderAggregate
 {
-    public class ProductItemordered
+    public class ProductItemOrdered
     {
         public int ProductId { get; set; }
         public required string ProductName { get; set; }

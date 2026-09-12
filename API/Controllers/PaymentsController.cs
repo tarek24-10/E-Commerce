@@ -1,12 +1,11 @@
 ﻿using Core.Entities;
 using Core.Interfaces;
-using Infrastructure.Services;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace API.Controllers
 {
-    public class PaymentController(IPaymentService paymentService,
+    public class PaymentsController(IPaymentService paymentService,
         IUnitOfWork unit) : BaseApiController
     {
         [Authorize]
