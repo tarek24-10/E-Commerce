@@ -19,5 +19,20 @@ namespace API.Controllers
 
             return Ok(pagination);
         }
+
+        protected async Task<ActionResult> CreatePagedResult<T,TDto>(IGenenricRepository<T> repo
+            , ISpecification<T> spec, int pageIndex, int pageSize
+            , Func<T, TDto> dtoConverter) where T : BaseEntity, IDtoCovertible
+        {
+            var items = await repo.ListAllWithSpecAsync(spec);
+
+            var count = await repo.CountAsync(spec);
+
+            var dtoItems = items.Select(dtoConverter).ToList();
+
+            var pagination = new Pagination<TDto>(pageIndex, pageSize, count, dtoItems);
+
+            return Ok(pagination);
+        }
     }
 }
