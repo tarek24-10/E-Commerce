@@ -44,7 +44,6 @@ namespace API.Controllers
             var deliveryMethod = await unit.Repository<DeliveryMethod>().GetByIdAsync(orderDto.DeliveryMethodId);
             if (deliveryMethod == null) return BadRequest("No delivery method Selected");
 
-
             var order = new Order()
             {
                 BuyerEmail = email,
