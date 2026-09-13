@@ -9,9 +9,9 @@ using Stripe;
 namespace API.Controllers
 {
     public class PaymentsController(IPaymentService paymentService,
-        IUnitOfWork unit, ILogger<PaymentsController> logger) : BaseApiController
+        IUnitOfWork unit, ILogger<PaymentsController> logger, IConfiguration config) : BaseApiController
     {
-        private readonly string whSecret = "";
+        private readonly string _whSecret = config["StripeSettings:WhSecret"]!;
 
         [Authorize]
         [HttpPost("{cartId}")]
@@ -82,7 +82,7 @@ namespace API.Controllers
         {
             try
             {
-                return Stripe.EventUtility.ConstructEvent(json, Request.Headers["Stripe-Signature"], whSecret);
+                return Stripe.EventUtility.ConstructEvent(json, Request.Headers["Stripe-Signature"], _whSecret);
 
             }
             catch (Exception ex)
