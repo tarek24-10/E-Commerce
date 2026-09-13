@@ -6,5 +6,6 @@
         PaymentReceived,
         PaymentFailed,
         PaymentMismatch,
+        Refunded,
     }
 }
