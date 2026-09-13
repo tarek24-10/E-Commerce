@@ -1,19 +1,7 @@
 ﻿namespace Core.Specifications
 {
-    public class ProductSpecParams
+    public class ProductSpecParams : PagingParams
     {
-        private int MaxPagesize = 50;
-
-        public int PageNumber { get; set; } = 1;
-
-        private int _pageSize = 6;
-        public int PageSize
-        {
-            get => _pageSize;
-            set => _pageSize = (_pageSize > MaxPagesize) ? MaxPagesize : value;
-        }
-
-
         private List<string> _brands = [];
         public List<string> Brands
         {

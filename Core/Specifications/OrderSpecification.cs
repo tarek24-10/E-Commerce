@@ -19,5 +19,27 @@ namespace Core.Specifications
             AddInclude("OrderItems");
             AddInclude("DeliveryMethod");
         }
+
+        public OrderSpecification(OrderSpecParams specParams) 
+            : base(o => string.IsNullOrEmpty(specParams.Status) || o.Status == ParseStatus(specParams.Status))
+        {
+            AddInclude("OrderItems");
+            AddInclude("DeliveryMethod");
+            ApplyPagination(specParams.PageSize * (specParams.PageNumber - 1), specParams.PageSize);
+            AddOrderByDescending(o => o.OrderDate);
+        }
+
+        private static OrderStatus? ParseStatus(string status)
+        {
+            if (Enum.TryParse<OrderStatus>(status, true, out var result))
+                return result;
+            return null;
+        }
+
+        public OrderSpecification(int id) : base(o => o.Id == id)
+        {
+            AddInclude("OrderItems");
+            AddInclude("DeliveryMethod");
+        }
     }
 }

@@ -51,7 +51,7 @@ namespace API.Controllers
             }
             catch (StripeException ex)
             {
-                logger.LogError("Stripe Webhook Error");
+                logger.LogError(ex, "Stripe Webhook Error");
                 return StatusCode(StatusCodes.Status500InternalServerError, "Stripe Webhook Error");
             }
 
