@@ -9,9 +9,9 @@ using Stripe;
 namespace API.Controllers
 {
     public class PaymentsController(IPaymentService paymentService,
-        IUnitOfWork unit, ILogger<PaymentsController> logger) : BaseApiController
+        IUnitOfWork unit, ILogger<PaymentsController> logger, IConfiguration config) : BaseApiController
     {
-        private readonly string whSecret = "";
+        private readonly string _whSecret = config["StripeSettings:WhSecret"]!;
 
         [Authorize]
         [HttpPost("{cartId}")]
@@ -53,7 +53,7 @@ namespace API.Controllers
 
             catch (Exception ex)
             {
-                logger.LogError("Error processing stripe payment intent succeeded");
+                logger.LogError(ex,"Error processing stripe payment intent succeeded");
                 return StatusCode(StatusCodes.Status500InternalServerError, "Error processing stripe payment intent succeeded");
             }
         }
@@ -82,7 +82,7 @@ namespace API.Controllers
         {
             try
             {
-                return Stripe.EventUtility.ConstructEvent(json, Request.Headers["Stripe-Signature"], whSecret);
+                return Stripe.EventUtility.ConstructEvent(json, Request.Headers["Stripe-Signature"], _whSecret);
 
             }
             catch (Exception ex)
