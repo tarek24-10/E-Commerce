@@ -1,4 +1,5 @@
 using API.Middlewares;
+using API.SignalR;
 using Core.Entities;
 using Core.Interfaces;
 using Infrastructure.Data;
@@ -39,6 +40,7 @@ builder.Services.AddAuthorization();
 builder.Services.AddIdentityApiEndpoints<AppUser>().AddEntityFrameworkStores<StoreContext>();
 
 builder.Services.AddScoped<IPaymentService, PaymentService>();
+builder.Services.AddSignalR();
 
 var app = builder.Build();
 
@@ -55,11 +57,15 @@ app.UseCors(c => c.AllowAnyHeader().AllowAnyMethod().AllowCredentials()
 
 //app.UseHttpsRedirection();
 
+app.UseAuthentication();
+
 app.UseAuthorization();
 
 app.MapControllers();
 
 app.MapGroup("api").MapIdentityApi<AppUser>();
+
+app.MapHub<NotificationHub>("/hub/notifications");
 
 try
 {
