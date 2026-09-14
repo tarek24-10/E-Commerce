@@ -1,4 +1,5 @@
-﻿using Core.Entities;
+﻿using API.RequestHelpers;
+using Core.Entities;
 using Core.Interfaces;
 using Core.Specifications;
 using Microsoft.AspNetCore.Authorization;
@@ -9,6 +10,7 @@ namespace API.Controllers
 
     public class ProductsController(IUnitOfWork unit) : BaseApiController
     {
+        [Cache(600)]
         [HttpGet]
         public async Task<ActionResult<IReadOnlyList<Product>>> GetProducts([FromQuery]ProductSpecParams specParams)
         {
@@ -17,6 +19,7 @@ namespace API.Controllers
             return await CreatePagedResult<Product>(unit.Repository<Product>(), spec, specParams.PageNumber, specParams.PageSize);
         }
 
+        [Cache(600)]
         [HttpGet("{id:int}")]
         public async Task<ActionResult<Product>> GetProduct(int id)
         {
@@ -86,6 +89,7 @@ namespace API.Controllers
             return BadRequest("Problem updating the product");
         }
 
+        [Cache(10000)]
         [HttpGet("brands")]
         public async Task<ActionResult<IReadOnlyList<string>>> GetBrands()
         {
@@ -93,6 +97,7 @@ namespace API.Controllers
             return Ok(await unit.Repository<Product>().ListAllWithSpecAsync(spec));
         }
 
+        [Cache(10000)]
         [HttpGet("types")]
         public async Task<ActionResult<IReadOnlyList<string>>> GetTypes()
         {
