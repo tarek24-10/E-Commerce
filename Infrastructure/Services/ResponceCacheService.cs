@@ -9,7 +9,7 @@ namespace Infrastructure.Services
         private readonly IDatabase _database = redis.GetDatabase(1);
         public async Task CacheResponceAsync(string cacheKey, object response, TimeSpan timeToLive)
         {
-            var options = new JsonSerializerOptions{PropertyNamingPolicy = JsonNamingPolicy.CamelCase};
+            var options = new JsonSerializerOptions { PropertyNamingPolicy = JsonNamingPolicy.CamelCase };
             var serializedResponse = JsonSerializer.Serialize(response, options);
             await _database.StringSetAsync(cacheKey, serializedResponse, timeToLive);
         }
@@ -24,6 +24,13 @@ namespace Infrastructure.Services
 
         public async Task RemoveCachedByPatternAsync(string pattern)
         {
+            var server = redis.GetServer(redis.GetEndPoints().First());
+            var keys = server.Keys(database: 1, pattern: $"*{pattern}*").ToArray();
+
+            if (keys.Length != 0)
+            {
+                await _database.KeyDeleteAsync(keys);
+            }
         }
     }
 }

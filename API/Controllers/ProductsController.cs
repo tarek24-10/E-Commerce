@@ -31,6 +31,7 @@ namespace API.Controllers
             return product;
         }
 
+        [InvalidateCache("/api/products|")]
         [Authorize(Roles = "Admin")]
         [HttpPost]
         public async Task<ActionResult<Product>> CreateProduct(Product product)
@@ -45,7 +46,7 @@ namespace API.Controllers
             return BadRequest("Problem creating the product");
         }
 
-
+        [InvalidateCache("/api/products|")]
         [Authorize(Roles = "Admin")]
         [HttpPut("{id:int}")]
         public async Task<ActionResult> UpdateProduct(int id, Product product)
@@ -70,6 +71,7 @@ namespace API.Controllers
             return await unit.Repository<Product>().ExistsAsync(id);
         }
 
+        [InvalidateCache("/api/products|")]
         [Authorize(Roles = "Admin")]
         [HttpDelete("{id:int}")]
         public async Task<ActionResult> DeleteProduct(int id)
