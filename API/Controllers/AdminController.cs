@@ -31,7 +31,7 @@ namespace API.Controllers
             return Ok(order.MapToOrderDto());
         }
 
-        [HttpPost("orders/refund/{{id:int}}")]
+        [HttpPost("orders/refund/{id:int}")]
         public async Task<ActionResult<OrderDto>> RefundOrder(int id)
         {
             var spec = new OrderSpecification(id);
