@@ -1,164 +1,173 @@
 [
   {
-    "Name": "Angular Speedster Board 2000",
-    "Description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas porttitor congue massa. Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis urna.",
-    "Price": 200,
-    "PictureUrl": "/images/products/sb-ang1.png",
-    "Type": "Boards",
-    "Brand": "Angular",
-    "QuantityInStock": 82
+    "Name": "iPhone 15 Pro",
+    "Description": "6.1-inch display, A17 chip, Pro camera system, 256GB storage.",
+    "Price": 999,
+    "PictureUrl": "/images/products/mobile-iphone15pro.png",
+    "Type": "Mobiles",
+    "Brand": "Apple",
+    "QuantityInStock": 42
   },
   {
-    "Name": "Green Angular Board 3000",
-    "Description": "Nunc viverra imperdiet enim. Fusce est. Vivamus a tellus.",
-    "Price": 150,
-    "PictureUrl": "/images/products/sb-ang2.png",
-    "Type": "Boards",
-    "Brand": "Angular",
+    "Name": "iPhone 15",
+    "Description": "6.1-inch display, A16 chip, dual camera system, 128GB storage.",
+    "Price": 799,
+    "PictureUrl": "/images/products/mobile-iphone15.png",
+    "Type": "Mobiles",
+    "Brand": "Apple",
+    "QuantityInStock": 88
+  },
+  {
+    "Name": "Galaxy S24 Ultra",
+    "Description": "6.8-inch Dynamic AMOLED, Snapdragon chipset, 512GB storage, quad camera.",
+    "Price": 1199,
+    "PictureUrl": "/images/products/mobile-s24ultra.png",
+    "Type": "Mobiles",
+    "Brand": "Samsung",
+    "QuantityInStock": 36
+  },
+  {
+    "Name": "Galaxy S24",
+    "Description": "6.2-inch display, great battery life, triple camera, 256GB.",
+    "Price": 899,
+    "PictureUrl": "/images/products/mobile-s24.png",
+    "Type": "Mobiles",
+    "Brand": "Samsung",
+    "QuantityInStock": 54
+  },
+  {
+    "Name": "Pixel 8 Pro",
+    "Description": "6.7-inch LTPO display, Tensor G3, advanced camera features, 256GB.",
+    "Price": 999,
+    "PictureUrl": "/images/products/mobile-pixel8pro.png",
+    "Type": "Mobiles",
+    "Brand": "Google",
+    "QuantityInStock": 20
+  },
+  {
+    "Name": "Pixel 8",
+    "Description": "6.2-inch display, Tensor G3, excellent computational photography, 128GB.",
+    "Price": 699,
+    "PictureUrl": "/images/products/mobile-pixel8.png",
+    "Type": "Mobiles",
+    "Brand": "Google",
+    "QuantityInStock": 44
+  },
+  {
+    "Name": "OnePlus 12",
+    "Description": "6.7-inch AMOLED, Snapdragon flagship, fast charging, 256GB.",
+    "Price": 799,
+    "PictureUrl": "/images/products/mobile-oneplus12.png",
+    "Type": "Mobiles",
+    "Brand": "OnePlus",
+    "QuantityInStock": 31
+  },
+  {
+    "Name": "Xiaomi 14",
+    "Description": "6.36-inch display, Snapdragon chipset, versatile camera, 256GB.",
+    "Price": 749,
+    "PictureUrl": "/images/products/mobile-xiaomi14.png",
+    "Type": "Mobiles",
+    "Brand": "Xiaomi",
+    "QuantityInStock": 27
+  },
+  {
+    "Name": "Pixel Fold",
+    "Description": "Foldable display, flagship performance, multitasking optimized, 512GB.",
+    "Price": 1799,
+    "PictureUrl": "/images/products/mobile-pixelfold.png",
+    "Type": "Mobiles",
+    "Brand": "Google",
+    "QuantityInStock": 8
+  },
+  {
+    "Name": "Galaxy Z Fold5",
+    "Description": "Premium foldable with large inner display, flagship specs, 512GB.",
+    "Price": 1899,
+    "PictureUrl": "/images/products/mobile-zfold5.png",
+    "Type": "Mobiles",
+    "Brand": "Samsung",
+    "QuantityInStock": 12
+  },
+  {
+    "Name": "iPhone SE (2024)",
+    "Description": "Compact design, A15 chip, budget-friendly iPhone with 128GB.",
+    "Price": 429,
+    "PictureUrl": "/images/products/mobile-iphonese.png",
+    "Type": "Mobiles",
+    "Brand": "Apple",
+    "QuantityInStock": 63
+  },
+  {
+    "Name": "Moto G Power",
+    "Description": "Large battery, reliable performance, 128GB storage.",
+    "Price": 199,
+    "PictureUrl": "/images/products/mobile-motogpower.png",
+    "Type": "Mobiles",
+    "Brand": "Motorola",
+    "QuantityInStock": 150
+  },
+  {
+    "Name": "Sony Xperia 1 V",
+    "Description": "6.5-inch 4K display, pro-grade camera features, 256GB.",
+    "Price": 1299,
+    "PictureUrl": "/images/products/mobile-xperia1v.png",
+    "Type": "Mobiles",
+    "Brand": "Sony",
+    "QuantityInStock": 9
+  },
+  {
+    "Name": "Nokia G42",
+    "Description": "Durable build, clean Android, 64GB storage, great value.",
+    "Price": 149,
+    "PictureUrl": "/images/products/mobile-nokiag42.png",
+    "Type": "Mobiles",
+    "Brand": "Nokia",
     "QuantityInStock": 75
   },
   {
-    "Name": "Core Board Speed Rush 3",
-    "Description": "Suspendisse dui purus, scelerisque at, vulputate vitae, pretium mattis, nunc. Mauris eget neque at sem venenatis eleifend. Ut nonummy.",
-    "Price": 180,
-    "PictureUrl": "/images/products/sb-core1.png",
-    "Type": "Boards",
-    "Brand": "NetCore",
-    "QuantityInStock": 3
+    "Name": "Realme 12 Pro",
+    "Description": "Affordable midrange, fast charging, 128GB.",
+    "Price": 329,
+    "PictureUrl": "/images/products/mobile-realme12pro.png",
+    "Type": "Mobiles",
+    "Brand": "Realme",
+    "QuantityInStock": 48
   },
   {
-    "Name": "Net Core Super Board",
-    "Description": "Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Proin pharetra nonummy pede. Mauris et orci.",
-    "Price": 300,
-    "PictureUrl": "/images/products/sb-core2.png",
-    "Type": "Boards",
-    "Brand": "NetCore",
-    "QuantityInStock": 52
+    "Name": "Oppo Find X6",
+    "Description": "High-end camera system, flagship performance, 256GB.",
+    "Price": 999,
+    "PictureUrl": "/images/products/mobile-findx6.png",
+    "Type": "Mobiles",
+    "Brand": "Oppo",
+    "QuantityInStock": 22
   },
   {
-    "Name": "React Board Super Whizzy Fast",
-    "Description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas porttitor congue massa. Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis urna.",
-    "Price": 250,
-    "PictureUrl": "/images/products/sb-react1.png",
-    "Type": "Boards",
-    "Brand": "React",
-    "QuantityInStock": 97
+    "Name": "Asus ROG Phone 8",
+    "Description": "Gaming phone with high refresh rate display and enhanced cooling, 512GB.",
+    "Price": 1099,
+    "PictureUrl": "/images/products/mobile-rog8.png",
+    "Type": "Mobiles",
+    "Brand": "Asus",
+    "QuantityInStock": 14
   },
   {
-    "Name": "Typescript Entry Board",
-    "Description": "Aenean nec lorem. In porttitor. Donec laoreet nonummy augue.",
-    "Price": 120,
-    "PictureUrl": "/images/products/sb-ts1.png",
-    "Type": "Boards",
-    "Brand": "Typescript",
-    "QuantityInStock": 37
+    "Name": "Honor Magic6",
+    "Description": "Flagship specs, strong camera performance, 256GB.",
+    "Price": 899,
+    "PictureUrl": "/images/products/mobile-honormagic6.png",
+    "Type": "Mobiles",
+    "Brand": "Honor",
+    "QuantityInStock": 26
   },
   {
-    "Name": "Core Blue Hat",
-    "Description": "Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis urna.",
-    "Price": 10,
-    "PictureUrl": "/images/products/hat-core1.png",
-    "Type": "Hats",
-    "Brand": "NetCore",
-    "QuantityInStock": 32
-  },
-  {
-    "Name": "Green React Woolen Hat",
-    "Description": "Suspendisse dui purus, scelerisque at, vulputate vitae, pretium mattis, nunc. Mauris eget neque at sem venenatis eleifend. Ut nonummy.",
-    "Price": 8,
-    "PictureUrl": "/images/products/hat-react1.png",
-    "Type": "Hats",
-    "Brand": "React",
-    "QuantityInStock": 6
-  },
-  {
-    "Name": "Purple React Woolen Hat",
-    "Description": "Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis urna.",
-    "Price": 15,
-    "PictureUrl": "/images/products/hat-react2.png",
-    "Type": "Hats",
-    "Brand": "React",
-    "QuantityInStock": 17
-  },
-  {
-    "Name": "Blue Code Gloves",
-    "Description": "Nunc viverra imperdiet enim. Fusce est. Vivamus a tellus.",
-    "Price": 18,
-    "PictureUrl": "/images/products/glove-code1.png",
-    "Type": "Gloves",
-    "Brand": "VS Code",
-    "QuantityInStock": 74
-  },
-  {
-    "Name": "Green Code Gloves",
-    "Description": "Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Proin pharetra nonummy pede. Mauris et orci.",
-    "Price": 15,
-    "PictureUrl": "/images/products/glove-code2.png",
-    "Type": "Gloves",
-    "Brand": "VS Code",
-    "QuantityInStock": 19
-  },
-  {
-    "Name": "Purple React Gloves",
-    "Description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas porttitor congue massa.",
-    "Price": 16,
-    "PictureUrl": "/images/products/glove-react1.png",
-    "Type": "Gloves",
-    "Brand": "React",
-    "QuantityInStock": 77
-  },
-  {
-    "Name": "Green React Gloves",
-    "Description": "Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Proin pharetra nonummy pede. Mauris et orci.",
-    "Price": 14,
-    "PictureUrl": "/images/products/glove-react2.png",
-    "Type": "Gloves",
-    "Brand": "React",
-    "QuantityInStock": 45
-  },
-  {
-    "Name": "Redis Red Boots",
-    "Description": "Suspendisse dui purus, scelerisque at, vulputate vitae, pretium mattis, nunc. Mauris eget neque at sem venenatis eleifend. Ut nonummy.",
-    "Price": 250,
-    "PictureUrl": "/images/products/boot-redis1.png",
-    "Type": "Boots",
-    "Brand": "Redis",
-    "QuantityInStock": 49
-  },
-  {
-    "Name": "Core Red Boots",
-    "Description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas porttitor congue massa. Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis urna.",
-    "Price": 189.99,
-    "PictureUrl": "/images/products/boot-core2.png",
-    "Type": "Boots",
-    "Brand": "NetCore",
-    "QuantityInStock": 28
-  },
-  {
-    "Name": "Core Purple Boots",
-    "Description": "Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Proin pharetra nonummy pede. Mauris et orci.",
-    "Price": 199.99,
-    "PictureUrl": "/images/products/boot-core1.png",
-    "Type": "Boots",
-    "Brand": "NetCore",
-    "QuantityInStock": 69
-  },
-  {
-    "Name": "Angular Purple Boots",
-    "Description": "Aenean nec lorem. In porttitor. Donec laoreet nonummy augue.",
-    "Price": 150,
-    "PictureUrl": "/images/products/boot-ang2.png",
-    "Type": "Boots",
-    "Brand": "Angular",
-    "QuantityInStock": 35
-  },
-  {
-    "Name": "Angular Blue Boots",
-    "Description": "Suspendisse dui purus, scelerisque at, vulputate vitae, pretium mattis, nunc. Mauris eget neque at sem venenatis eleifend. Ut nonummy.",
-    "Price": 180,
-    "PictureUrl": "/images/products/boot-ang1.png",
-    "Type": "Boots",
-    "Brand": "Angular",
-    "QuantityInStock": 27
+    "Name": "Poco X6 Pro",
+    "Description": "Value flagship, great battery and performance, 256GB.",
+    "Price": 349,
+    "PictureUrl": "/images/products/mobile-pocox6pro.png",
+    "Type": "Mobiles",
+    "Brand": "Poco",
+    "QuantityInStock": 58
   }
 ]
